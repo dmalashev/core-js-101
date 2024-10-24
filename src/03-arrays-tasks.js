@@ -418,6 +418,7 @@ function toStringList(arr) {
  *    ]
  */
 function sortCitiesArray(/* arr */) {
+  // return arr.sort();
   throw new Error('Not implemented');
 }
 
@@ -439,8 +440,9 @@ function sortCitiesArray(/* arr */) {
  *           [0,0,0,1,0],
  *           [0,0,0,0,1]]
  */
-function getIdentityMatrix(/* n */) {
-  throw new Error('Not implemented');
+function getIdentityMatrix(n) {
+  const arr = new Array(n).fill(new Array(n).fill(0));
+  return arr.map((row, rowI) => row.map((col, colI) => (colI === rowI ? 1 : 0)));
 }
 
 /**
